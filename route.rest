@@ -1,0 +1,7 @@
+PATCH http://localhost:4000/63f595cf03686e7a9090abdb/
+Content-Type: application/json
+
+{
+    "email":"monjardinelijah121@gmail.com",
+    "password":"123qwe"
+}
