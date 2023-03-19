@@ -11,6 +11,7 @@ const session = require("express-session");
 const bodyParser = require("body-parser");
 const app = express();
 const User = require("./user");
+require("./passportConfig")(passport);
 
 //----------------------------------------- END OF IMPORTS---------------------------------------------------
 
@@ -31,21 +32,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: process.env.CLIENT_URL, // <-- location of the react app were connecting to
+    origin: [process.env.CLIENT_URL,'http://localhost:3000'], // <-- location of the react app were connecting to
     credentials: true,
   })
 );
 app.use(
   session({
     secret: "secretcode",
-    resave: true,
+    resave: false,
     saveUninitialized: true,
   })
 );
 app.use(cookieParser("secretcode"));
 app.use(passport.initialize());
 app.use(passport.session());
-require("./passportConfig")(passport);
+
 
 //----------------------------------------- END OF MIDDLEWARE---------------------------------------------------
 
@@ -57,8 +58,11 @@ app.post("/login", async (req, res, next) => {
     else {
       req.logIn(user, (err) => {
         if (err) throw err;
-        res.send("Successfully Authenticated");
-        console.log("Logged in: "+req.user.email);
+        req.session.save(()=>{
+          res.send("Successfully Authenticated");
+          console.log("Logged in: "+req.user.email);
+        })
+          
       });
     }
   })(req, res, next);
@@ -529,7 +533,7 @@ async function getUser(req,res,next){
 
 //----------------------------------------- END OF ROUTES---------------------------------------------------
 function checkAuthenticated(req,res,next){
-    
+  console.log("Is authenticated: "+req.isAuthenticated())
   if(req.isAuthenticated()){
       return next()
   }
