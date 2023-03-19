@@ -96,7 +96,7 @@ app.post("/register", async (req, res) => {
           email:req.body.email,
           password: hashedPassword,
           birthDay:req.body.birthDay,
-          defaultProfile: "https://lh3.googleusercontent.com/COIa9WcwzEovtQbRpmEJzhAXiyrwvo2T1oqnbGhjRSBI2KXm-6CziGKotKmE4jY58nEgJJm9NeMulNc4aq0a6NyCckauHPwo863HUELD3-SrWsrvmtbDbbUGSr5SfYTd7SODw8dIKtggqmgYEusSGTVU4ztlarsn0eZadU9RNUmv23leKiwEV64z2iChxEASYyjI5TZ1D_WWF5HpIP_PqHpRerNvyO4ZnRInw1FbpsC_gxFyY5KlfMZuAMyj7a6HqGB6MH-yMEp_4twWXe9CM-uasqYP-Jfj-UHweOYQXz3XfC1F87HzGwam5oHN7MsC2iIPybVPAOnfQYHsYy5CzxXWRZ1iJs0eJ35Ra1BhbeU_pTN19_DqSLdKnd2OBG7YLhs267ezGMH4xgn8NBICXbaR1JZ-WBWZN9A80zHkDWYFiucCHYOOaKDkX4I4EGIpAI7IJ7S5Q6pdWe1KwX9N8POhGaxNvQWeBSps5QCrmmeL7oKPW1eOnsDaVZxeQJ26QsmYSGguoPw_CPSw1bjgxvb0ySlNIQ0imWzSkjHrF3flwUx7EaOR01Ucvb5Uah_kxSSVyue4q4Aj7rf_jXlkQbeUvz_YZaagOpM48OUwvT_HYPkjn-avvJNZcwKxLj1uAPjWthJy4UerfcOOKSMIZN7vW9bT-T7l1t7XbrAutaU-8I_r7EmGxQCPUFv6NZO0GJfOLN36YSeQ2rgob5B8GbFW2mLOrfXXy4owwvMFYuJssTZcvXc_t0H20qY7gXbAs_hBBTkqkgk4BugkuywBDc0vBJGWv6AWQAUgPPlc6c3bjuB3ER5KjGVMffuk3dToJYQIziOuURSBs_ytEHa3rcyqF-EUtQL8g-PbRd1UyfPHWUzD1RnSZ6O3ZuUIqjtT65wPB-MSO6wiaxL1vg6NDF8ZiMxjvs89Nq6aYGGDep8zNIeMcoRneqGM0YkbH5IJYojWvVBSMAIM-2a-HYdQ=s898-no?authuser=0",
+          defaultProfile: "https://i.ibb.co/CMYF4WZ/Untitled-design-3.png",
           bio:"Add Bio",
           friends: [],
           friendRequests:[],
