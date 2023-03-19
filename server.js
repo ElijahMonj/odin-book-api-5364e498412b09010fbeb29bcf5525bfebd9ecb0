@@ -540,6 +540,6 @@ function checkAuthenticated(req,res,next){
   res.json({username : "Please Login"})
 }
 //Start Server
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, () => {
   console.log("Server Has Started");
 });
